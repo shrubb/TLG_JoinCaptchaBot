@@ -2821,8 +2821,8 @@ def cmd_about(update: Update, context: CallbackContext):
     lang = get_update_user_lang(update_msg.from_user)
     if chat_type != "private":
         lang = get_chat_config(chat_id, "Language")
-    msg_text = TEXT[lang]["ABOUT_MSG"].format(CONST["DEVELOPER"],
-            CONST["REPOSITORY"], CONST["DEV_DONATION_ADDR"])
+    msg_text = TEXT[lang]["ABOUT_MSG"]
+    # .format(CONST["DEVELOPER"], CONST["REPOSITORY"], CONST["DEV_DONATION_ADDR"])
     tlg_send_msg(bot, chat_id, msg_text)
 
 
